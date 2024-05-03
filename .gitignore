@@ -1,0 +1,24 @@
+*.txt
+*.zip
+*.json
+*.pdf
+
+# hw1
+
+data/
+ojdata/
+raw-data/
+
+测试语料/
+拼音汉字表/
+输入输出格式样例/
+语料库/
+
+/hw1/version.py
+
+# hw2
+
+__pycache__
+logs/
+models/
+Dataset/
