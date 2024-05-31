@@ -2,6 +2,7 @@
 *.zip
 *.json
 *.pdf
+.vscode/
 
 # hw1
 
@@ -16,9 +17,14 @@ raw-data/
 
 /hw1/version.py
 
-# hw2
+# hw2 
 
-__pycache__
+__pycache__/
 logs/
 models/
 Dataset/
+
+# hw3
+
+loc_hw3/
+TestCases/

@@ -94,6 +94,9 @@ class MLP(nn.Module):
         
         self.__name__ = "MLP"
         
+        print(config.vocabulary_size)
+        print(config.embed_size)
+        
         self.embedding = nn.Embedding(config.vocabulary_size, config.embed_size) # 初始词嵌入
         self.embedding.weight.requires_grad = True # 词嵌入也需要训练
         self.embedding.weight.data.copy_(torch.from_numpy(getWord2Vec(word2id))) # 初始化词嵌入
@@ -106,6 +109,7 @@ class MLP(nn.Module):
         self.dropout = nn.Dropout(config.dropout_rate) # 随机丢弃
         
     def forward(self, x):
+        print(x)
         x = self.embedding(x).view(x.size(0), -1)# 词嵌入
         x = F.relu(self.linear1(x)) # 第一个全连接层
         x = self.dropout(x)
